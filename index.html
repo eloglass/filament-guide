@@ -74,41 +74,60 @@
                      <p class="mb-6 text-gray-600">Beyond simple strength and heat deflection, other properties often determine the best filament for a specific job. This section explores toughness, flexibility, printability, and wear resistance to guide your selection for functional parts.</p>
                      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
                         <div>
-                             <h3 class="text-xl font-semibold text-center text-[#3563a9] mb-2">Toughness (Impact Resistance)</h3>
+                            <a href="https://en.wikipedia.org/wiki/Izod_impact_strength_test" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                <h3 class="text-xl font-semibold text-center text-[#3563a9] mb-2">Toughness (Impact Resistance)</h3>
+                            </a>
                              <p class="text-sm text-center text-gray-500 mb-4">Higher is better for parts that will be dropped or struck.</p>
                              <div class="chart-container" style="height: 600px; max-height: 80vh;">
                                  <canvas id="impactChart"></canvas>
                              </div>
                          </div>
                         <div>
-                            <h3 class="text-xl font-semibold text-center text-[#3563a9] mb-2">Layer Adhesion (Z-Axis Tensile Strength)</h3>
+                            <a href="https://en.wikipedia.org/wiki/Tensile_testing" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                <h3 class="text-xl font-semibold text-center text-[#3563a9] mb-2">Layer Adhesion (Z-Axis Tensile Strength)</h3>
+                            </a>
                             <p class="text-sm text-center text-gray-500 mb-4">Higher strength indicates stronger bonds between layers.</p>
                              <div class="chart-container" style="height: 600px; max-height: 80vh;">
                                 <canvas id="layerAdhesionChart"></canvas>
                             </div>
                         </div>
                          <div>
-                             <h3 class="text-xl font-semibold text-center text-[#3563a9] mb-2">Flexibility (Elongation at Break)</h3>
+                            <a href="https://en.wikipedia.org/wiki/Ductility" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                <h3 class="text-xl font-semibold text-center text-[#3563a9] mb-2">Flexibility (Elongation at Break)</h3>
+                            </a>
                              <p class="text-sm text-center text-gray-500 mb-4">Higher % means the material can bend more before failing.</p>
                               <div class="chart-container" style="height: 600px; max-height: 80vh;">
                                  <canvas id="flexibilityChart"></canvas>
                              </div>
                          </div>
                          <div>
-                            <h3 class="text-xl font-semibold text-center text-[#3563a9] mb-2">Stiffness (Flexural Modulus)</h3>
+                            <a href="https://en.wikipedia.org/wiki/Flexural_modulus" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                <h3 class="text-xl font-semibold text-center text-[#3563a9] mb-2">Stiffness (Flexural Modulus)</h3>
+                            </a>
                             <p class="text-sm text-center text-gray-500 mb-4">Higher values indicate a more rigid material that resists bending.</p>
                              <div class="chart-container" style="height: 600px; max-height: 80vh;">
                                 <canvas id="stiffnessChart"></canvas>
-                             </div>
+                            </div>
                         </div>
                          <div>
-                            <h3 class="text-xl font-semibold text-center text-[#3563a9] mb-2">Durability (Taber Abrasion)</h3>
+                            <a href="https://en.wikipedia.org/wiki/Abrasion_(mechanical)" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                <h3 class="text-xl font-semibold text-center text-[#3563a9] mb-2">Durability (Taber Abrasion)</h3>
+                            </a>
                             <p class="text-sm text-center text-gray-500 mb-4">Measures wear; a lower mass loss is better.</p>
                              <div class="chart-container" style="height: 600px; max-height: 80vh;">
-                                 <canvas id="abrasionChart"></canvas>
-                             </div>
+                                <canvas id="abrasionChart"></canvas>
+                            </div>
                         </div>
-                         <div >
+                        <div>
+                            <a href="https://en.wikipedia.org/wiki/Heat_deflection_temperature" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                <h3 class="text-xl font-semibold text-center text-[#3563a9] mb-2">Heat Deflection</h3>
+                            </a>
+                             <p class="text-sm text-center text-gray-500 mb-4">The temperature at which a material deforms under load.</p>
+                              <div class="chart-container" style="height: 600px; max-height: 80vh;">
+                                 <canvas id="heatDeflectionChart"></canvas>
+                             </div>
+                         </div>
+                         <div class="lg:col-span-2">
                              <h3 class="text-xl font-semibold text-center text-[#3563a9] mb-2">Printability (Ease of Use)</h3>
                              <p class="text-sm text-center text-gray-500 mb-4">A higher score indicates an easier, more forgiving printing experience.</p>
                               <div class="chart-container" style="height: 600px; max-height: 80vh;">
@@ -197,28 +216,20 @@
                     </div>
                 </div>
             </section>
-
-             <section id="custom-comparison">
+            
+            <section id="custom-comparison">
                 <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
                     <h2 class="text-3xl font-bold text-[#00429d] mb-4">Custom Comparison Tool</h2>
-                    <p class="mb-6 text-gray-600">Select 2 or 3 filaments, the properties to compare, and a chart type, then click "Generate Chart" for a direct visual analysis.</p>
+                    <p class="mb-6 text-gray-600">Select 2 or 3 filaments and the properties you want to compare, then click "Generate Chart" for a direct visual analysis.</p>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div class="md:col-span-1">
-                            <h3 class="font-semibold text-lg mb-2 text-[#3563a9]">1. Select Filaments</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2 text-[#3563a9]">1. Select Filaments (Choose 2 or 3)</h3>
                             <div id="filament-selector" class="space-y-2 max-h-48 overflow-y-auto border p-3 rounded-lg"></div>
                         </div>
                         <div class="md:col-span-2">
-                             <h3 class="font-semibold text-lg mb-2 text-[#3563a9]">2. Select Properties</h3>
-                             <div id="property-selector" class="grid grid-cols-2 sm:grid-cols-2 gap-2"></div>
-                        </div>
-                         <div class="md:col-span-1">
-                            <h3 class="font-semibold text-lg mb-2 text-[#3563a9]">3. Select Chart Type</h3>
-                             <select id="chartTypeSelector" class="w-full p-2 border rounded-lg bg-white text-sm">
-                                <option value="radar" selected>Radar Chart</option>
-                                <option value="bar">Bar Chart</option>
-                                <option value="line">Line Chart</option>
-                            </select>
+                             <h3 class="font-semibold text-lg mb-2 text-[#3563a9]">2. Select Properties to Compare</h3>
+                             <div id="property-selector" class="grid grid-cols-2 sm:grid-cols-3 gap-2"></div>
                         </div>
                     </div>
 
@@ -234,9 +245,15 @@
                     </div>
                 </div>
             </section>
-
         </main>
-<script>
+
+        <footer class="text-center mt-16 text-gray-500 text-sm">
+            <p>Data sourced from industry averages. Performance may vary by brand and print settings. Always print in a well-ventilated area.</p>
+            <p>Infographic created with Chart.js and Tailwind CSS. NO SVG or Mermaid.js used.</p>
+        </footer>
+    </div>
+
+    <script>
         const fullFilamentData = [
             { "Filament": "PLA", "Price": 25, "HeatDeflection": 55, "TensileStrength": 45, "ImpactResistance": 6, "Flexibility": 4, "Printability": 5, "TaberAbrasion": 25, "LayerAdhesion": 30, "Stiffness": 2600 },
             { "Filament": "PLA-CF", "Price": 47.5, "HeatDeflection": 60, "TensileStrength": 60, "ImpactResistance": 8, "Flexibility": 2, "Printability": 4, "TaberAbrasion": 22, "LayerAdhesion": 28, "Stiffness": 4500 },
@@ -260,21 +277,23 @@
             { "Filament": "PC", "Price": 55, "HeatDeflection": 115, "TensileStrength": 65, "ImpactResistance": 64, "Flexibility": 4, "Printability": 1, "TaberAbrasion": 10, "LayerAdhesion": 25, "Stiffness": 2400 },
             { "Filament": "PC-CF", "Price": 100, "HeatDeflection": 200, "TensileStrength": 95, "ImpactResistance": 20, "Flexibility": 2, "Printability": 1, "TaberAbrasion": 7, "LayerAdhesion": 22, "Stiffness": 9000 },
             { "Filament": "PC-GF", "Price": 85, "HeatDeflection": 190, "TensileStrength": 90, "ImpactResistance": 22, "Flexibility": 3, "Printability": 1, "TaberAbrasion": 8, "LayerAdhesion": 24, "Stiffness": 7500 },
-            { "Filament": "Silk PLA", "Price": 30, "HeatDeflection": 55, "TensileStrength": 40, "ImpactResistance": 5, "Flexibility": 4, "Printability": 5, "TaberAbrasion": 26, "LayerAdhesion": 28, "Stiffness": 2500 }
+            { "Filament": "PPA", "Price": 120, "HeatDeflection": 120, "TensileStrength": 85, "ImpactResistance": 50, "Flexibility": 15, "Printability": 1, "TaberAbrasion": 7, "LayerAdhesion": 40, "Stiffness": 3200 },
+            { "Filament": "PPA-CF", "Price": 160, "HeatDeflection": 240, "TensileStrength": 140, "ImpactResistance": 18, "Flexibility": 2, "Printability": 1, "TaberAbrasion": 5, "LayerAdhesion": 38, "Stiffness": 12000 },
+            { "Filament": "PPA-GF", "Price": 140, "HeatDeflection": 220, "TensileStrength": 120, "ImpactResistance": 28, "Flexibility": 3, "Printability": 1, "TaberAbrasion": 6, "LayerAdhesion": 40, "Stiffness": 9500 }
         ];
 
-        const chartFilamentData = fullFilamentData.filter(d => !['Wood PLA', 'Metal PLA', 'Silk PLA'].includes(d.Filament));
+        const chartFilamentData = fullFilamentData;
         
         const profileData = {
-            'PLA': { pros: "Easy to print, wide color range, low cost, great general purpose filament.", cons: 'Brittle, low heat and UV resistance.', use: 'Visual prototypes, hobbyist models, non-functional parts.' },
-            'ABS': { pros: 'Tough, high heat resistance, can be acetone-smoothed.', cons: 'Warps easily, requires enclosure, strong fumes.', use: 'Functional parts, enclosures, can be smoothed and post-processed for cosplay.' },
-            'ASA': { pros: 'Excellent UV, weather, and chemical resistance, strong, can be smoothed and post-processed.', cons: 'Warps like ABS, requires enclosure, strong fumes.', use: 'Outdoor items, automotive exterior parts, garden tools.' },
-            'PETG': { pros: 'Good balance of strength and ease of use, low warp.', cons: 'Prone to stringing, scratches easily.', use: 'Mechanical parts, protective cases, great general use filament.' },
+            'PLA': { pros: "Extremely easy to print with minimal warping, making it the default for beginners. Excellent detail and surface finish.", cons: 'Low heat resistance (can deform in a hot car). Brittle nature makes it unsuitable for high-impact functional parts.', use: 'Detailed visual models, general purpose prototyping, hobbyist prints, and aesthetic items.' },
+            'ABS': { pros: 'High toughness and temperature resistance. Can be vapor-smoothed with acetone for a glossy finish.', cons: 'Prone to warping without an enclosure. Emits strong fumes during printing.', use: 'Durable functional parts, enclosures, automotive interior trim, and cosplay props.' },
+            'ASA': { pros: 'An improved, modern version of ABS with excellent UV and weather resistance.', cons: 'Requires an enclosure to prevent warping and manage fumes, similar to ABS.', use: 'Perfect for parts used outdoors, like drone shells, car accessories, and garden equipment.' },
+            'PETG': { pros: "A great all-rounder combining PLA's ease of printing with ABS's durability. Excellent layer adhesion and low shrinkage.", cons: 'Can be very stringy if not dried properly. Scratches more easily than other engineering materials.', use: 'Functional parts like brackets and machine guards, protective cases, and items needing good chemical resistance.' },
             'TPU (95A)': { pros: 'Extremely flexible, high impact and abrasion resistance.', cons: 'Difficult to print, requires slow speeds, hygroscopic.', use: 'Flexible seals, phone cases, wearables, vibration dampeners.' },
             'PA6': { pros: 'Extremely tough, high wear resistance, strong.', cons: 'Very hygroscopic (absorbs moisture), requires high temps.', use: 'Gears, bearings, high-wear functional parts.' },
             'PA12': { pros: 'Tough and flexible, lower moisture absorption than PA6.', cons: 'Less strong than PA6, expensive, requires high temps.', use: 'Durable parts for humid environments, snap-fit components.' },
             'PC': { pros: 'Exceptional strength and impact resistance, very high heat resistance.', cons: 'Very difficult to print, requires very high temps and enclosure.', use: 'High-strength engineering parts, protective shields.' },
-            'Aesthetic': { pros: 'Unique visual finishes like wood, silk, or metal.', cons: 'Often weaker and more brittle than standard PLA.', use: 'Decorative objects, trophies, architectural models, cosplay items.'}
+            'PPA': { pros: 'Excellent strength, stiffness, and heat resistance, superior to most nylons.', cons: 'Very difficult to print, extremely hygroscopic, expensive.', use: 'High-stress automotive components, industrial fixtures, metal replacement.'}
         };
 
         const palette = {
@@ -290,7 +309,8 @@
             gray: '#6b7280',
             teal: '#1abc9c',
             pink: '#f06292',
-            brown: '#a16e2d'
+            brown: '#a16e2d',
+            rust: '#c0392b'
         };
         
         const baseMaterialColors = {
@@ -302,12 +322,13 @@
             'PA6': palette.gray,
             'PA12': palette.blue_deep,
             'PC': palette.purple_mid,
-            'Aesthetic': palette.brown
+            'PPA': palette.rust
         };
         
         const getBaseMaterial = (filamentName) => {
             if (filamentName.startsWith('PA6')) return 'PA6';
             if (filamentName.startsWith('PA12')) return 'PA12';
+            if (filamentName.startsWith('PPA')) return 'PPA';
             if (filamentName.includes('PLA')) return 'PLA';
             if (filamentName.startsWith('TPU')) return 'TPU (95A)';
             return filamentName.split('-')[0];
@@ -352,7 +373,7 @@
         const createFullDataTable = () => {
             const tableHead = document.querySelector('.table-sortable thead tr');
             const tableBody = document.querySelector('.table-sortable tbody');
-            const headers = ["Filament", "Price ($/kg)", "Heat Deflection (°C) @ 0.45 MPa", "Tensile Strength (MPa)", "Impact Resistance (kJ/m²)", "Layer Adhesion (MPa)", "Flexibility (%)", "Stiffness (MPa)", "Taber Abrasion (mg loss)", "Printability"];
+            const headers = ["Filament", "Price ($/kg)", "Heat Deflection (°C)", "Tensile Strength (MPa)", "Impact Resistance (kJ/m²)", "Layer Adhesion (MPa)", "Flexibility (%)", "Stiffness (MPa)", "Taber Abrasion (mg loss)", "Printability"];
             
             tableHead.innerHTML = '';
             headers.forEach(header => {
@@ -440,6 +461,151 @@
             link.click();
             document.body.removeChild(link);
         });
+        
+        let customComparisonChart;
+        
+        const initCustomComparisonTool = () => {
+            const filamentSelector = document.getElementById('filament-selector');
+            const sortedFilaments = [...chartFilamentData].sort((a, b) => a.Filament.localeCompare(b.Filament));
+            sortedFilaments.forEach(f => {
+                filamentSelector.innerHTML += `
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="filament" value="${f.Filament}" class="rounded">
+                        <span>${f.Filament}</span>
+                    </label>
+                `;
+            });
+
+            const propertySelector = document.getElementById('property-selector');
+            const properties = ["HeatDeflection", "TensileStrength", "ImpactResistance", "LayerAdhesion", "Flexibility", "Stiffness", "TaberAbrasion", "Printability", "Price"];
+            const propertyDisplayNames = {
+                HeatDeflection: 'Heat Deflection',
+                TensileStrength: 'Tensile Strength',
+                ImpactResistance: 'Impact Resistance',
+                LayerAdhesion: 'Layer Adhesion',
+                Flexibility: 'Flexibility',
+                Stiffness: 'Stiffness',
+                TaberAbrasion: 'Taber Abrasion',
+                Printability: 'Printability',
+                Price: 'Price'
+            };
+
+            properties.forEach(p => {
+                propertySelector.innerHTML += `
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" name="property" value="${p}" class="rounded">
+                        <span>${propertyDisplayNames[p]}</span>
+                    </label>
+                `;
+            });
+            
+             document.querySelectorAll('#filament-selector input').forEach(checkbox => {
+                checkbox.addEventListener('change', () => {
+                    const checkedCount = document.querySelectorAll('#filament-selector input:checked').length;
+                    if (checkedCount > 3) {
+                        checkbox.checked = false;
+                        document.getElementById('comparison-message').textContent = 'You can select a maximum of 3 filaments.';
+                         setTimeout(() => document.getElementById('comparison-message').textContent = '', 3000);
+                    }
+                });
+            });
+
+            document.getElementById('generateChartBtn').addEventListener('click', generateCustomChart);
+        };
+        
+        const generateCustomChart = () => {
+            const selectedFilaments = Array.from(document.querySelectorAll('#filament-selector input:checked')).map(cb => cb.value);
+            const selectedProperties = Array.from(document.querySelectorAll('#property-selector input:checked')).map(cb => cb.value);
+            const messageEl = document.getElementById('comparison-message');
+
+            if (selectedFilaments.length < 2 || selectedFilaments.length > 3) {
+                messageEl.textContent = 'Please select 2 or 3 filaments.';
+                return;
+            }
+            if (selectedProperties.length < 3) {
+                messageEl.textContent = 'Please select at least 3 properties.';
+                return;
+            }
+            messageEl.textContent = '';
+
+            const propertyDisplayNames = { HeatDeflection: 'Heat Deflection', TensileStrength: 'Tensile Strength', ImpactResistance: 'Impact Resistance', LayerAdhesion: 'Layer Adhesion', Flexibility: 'Flexibility', Stiffness: 'Stiffness', TaberAbrasion: 'Taber Abrasion', Printability: 'Printability', Price: 'Price' };
+            
+            const datasets = [];
+            const dataToCompare = chartFilamentData.filter(f => selectedFilaments.includes(f.Filament));
+            
+            const maxValues = {};
+            selectedProperties.forEach(prop => {
+                maxValues[prop] = Math.max(...dataToCompare.map(f => f[prop]));
+            });
+            
+            const minValues = {};
+            selectedProperties.forEach(prop => {
+                minValues[prop] = Math.min(...dataToCompare.map(f => f[prop]));
+            });
+
+
+            dataToCompare.forEach((filament, index) => {
+                const color = baseMaterialColors[getBaseMaterial(filament.Filament)] || palette.gray;
+                const data = selectedProperties.map(prop => {
+                    let value = filament[prop];
+                    if (prop === 'TaberAbrasion') {
+                         return ((maxValues[prop] - value) / (maxValues[prop] - minValues[prop] || 1)) * 100;
+                    }
+                    return (value / (maxValues[prop] || 1)) * 100;
+                });
+                
+                datasets.push({
+                    label: filament.Filament,
+                    data: data,
+                    fill: true,
+                    backgroundColor: color.startsWith('#') ? `${color}80` : color.replace(')', ', 0.5)').replace('rgb', 'rgba'),
+                    borderColor: color,
+                    pointBackgroundColor: color
+                });
+            });
+
+            if (customComparisonChart) {
+                customComparisonChart.destroy();
+            }
+
+            customComparisonChart = new Chart(document.getElementById('customComparisonChart'), {
+                type: 'radar',
+                data: {
+                    labels: selectedProperties.map(p => propertyDisplayNames[p]),
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                         tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const filamentName = context.dataset.label;
+                                    const propName = context.label;
+                                    const originalValue = chartFilamentData.find(f=>f.Filament === filamentName)[selectedProperties[context.dataIndex]];
+                                    return `${filamentName}: ${originalValue}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                            grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                            pointLabels: { font: { size: 12 } },
+                            ticks: {
+                                display: false
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 100
+                        }
+                    }
+                }
+            });
+        };
+        
+        initCustomComparisonTool();
 
         const bubbleChart = new Chart(document.getElementById('mainBubbleChart'), {
             type: 'bubble',
@@ -600,7 +766,14 @@
              options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, ...chartTooltipOptions, scales: { x: { title: { display: true, text: 'Flexural Modulus (MPa)' } } } }
         });
 
-        const engineeringFilaments = chartFilamentData.filter(d => ['PA6', 'PA12', 'PC', 'PA6-CF', 'PA12-CF', 'PC-CF', 'PA6-GF', 'PA12-GF', 'PC-GF'].includes(d.Filament)).sort((a, b) => b.TensileStrength - a.TensileStrength);
+        const heatDeflectionData = [...chartFilamentData].sort((a,b) => b.HeatDeflection - a.HeatDeflection);
+        new Chart(document.getElementById('heatDeflectionChart'), {
+             type: 'bar',
+             data: { labels: heatDeflectionData.map(d => d.Filament), datasets: [{ label: 'Heat Deflection', data: heatDeflectionData.map(d => d.HeatDeflection), backgroundColor: palette.orange_bright+'bf', borderColor: palette.orange_bright, borderWidth: 1 }] },
+             options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, ...chartTooltipOptions, scales: { x: { title: { display: true, text: 'Heat Deflection (°C) @ 0.45 MPa' } } } }
+        });
+
+        const engineeringFilaments = chartFilamentData.filter(d => ['PA6', 'PA12', 'PC', 'PA6-CF', 'PA12-CF', 'PC-CF', 'PA6-GF', 'PA12-GF', 'PC-GF', 'PPA', 'PPA-CF', 'PPA-GF'].includes(d.Filament)).sort((a, b) => b.TensileStrength - a.TensileStrength);
         new Chart(document.getElementById('engineeringBarChart'), {
             type: 'bar',
             data: { labels: engineeringFilaments.map(d => wrapLabel(d.Filament)), datasets: [ { label: 'Tensile Strength (MPa)', data: engineeringFilaments.map(d => d.TensileStrength), backgroundColor: palette.blue_deep }, { label: 'Price ($/kg)', data: engineeringFilaments.map(d => d.Price), backgroundColor: palette.orange_bright + 'bf', yAxisID: 'y1' }] },
@@ -622,184 +795,6 @@
             options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, ...chartTooltipOptions, scales: { x: { title: { display: true, text: '°C / $' } } } }
         });
 
-        // --- CUSTOM COMPARISON TOOL LOGIC (MOVED AND UPDATED) ---
-
-        let customComparisonChartInstance;
-        const filamentSelector = document.getElementById('filament-selector');
-        const propertySelector = document.getElementById('property-selector');
-        const generateChartBtn = document.getElementById('generateChartBtn');
-        const comparisonMessage = document.getElementById('comparison-message');
-        const chartTypeSelector = document.getElementById('chartTypeSelector');
-        
-        const comparisonColors = [palette.blue_sky, palette.purple_mid, palette.orange_bright];
-
-        const properties = [
-            { key: 'TensileStrength', label: 'Tensile Strength', checked: true },
-            { key: 'HeatDeflection', label: 'Heat Deflection', checked: true },
-            { key: 'ImpactResistance', label: 'Impact Resistance', checked: true },
-            { key: 'LayerAdhesion', label: 'Layer Adhesion' },
-            { key: 'Flexibility', label: 'Flexibility' },
-            { key: 'Stiffness', label: 'Stiffness' },
-            { key: 'Printability', label: 'Printability' },
-            { key: 'Price', label: 'Price (Lower is Better)' },
-            { key: 'TaberAbrasion', label: 'Abrasion (Lower is Better)' },
-        ];
-        
-        // Populate Filament Selector
-        fullFilamentData.forEach(f => {
-            const div = document.createElement('div');
-            div.className = 'flex items-center';
-            div.innerHTML = `
-                <input id="sel-${f.Filament}" value="${f.Filament}" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-[#00429d] focus:ring-[#3563a9]">
-                <label for="sel-${f.Filament}" class="ml-2 block text-sm text-gray-900">${f.Filament}</label>
-            `;
-            filamentSelector.appendChild(div);
-        });
-
-        // Populate Property Selector
-        properties.forEach(p => {
-            const div = document.createElement('div');
-            div.className = 'flex items-center';
-            div.innerHTML = `
-                <input id="prop-${p.key}" value="${p.key}" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-[#00429d] focus:ring-[#3563a9]" ${p.checked ? 'checked' : ''}>
-                <label for="prop-${p.key}" class="ml-2 block text-sm text-gray-900">${p.label}</label>
-            `;
-            propertySelector.appendChild(div);
-        });
-
-        // Add click listener to button
-        generateChartBtn.addEventListener('click', () => {
-            const selectedFilaments = Array.from(filamentSelector.querySelectorAll('input:checked')).map(el => el.value);
-            const selectedProperties = Array.from(propertySelector.querySelectorAll('input:checked')).map(el => el.value);
-            const selectedChartType = chartTypeSelector.value;
-
-            // Validation
-            if (selectedFilaments.length < 2 || selectedFilaments.length > 3) {
-                comparisonMessage.textContent = 'Please select 2 or 3 filaments to compare.';
-                return;
-            }
-            if (selectedProperties.length < 1) {
-                comparisonMessage.textContent = 'Please select at least one property to compare.';
-                return;
-            }
-            comparisonMessage.textContent = '';
-
-            // Get data for selected filaments
-            const filamentData = selectedFilaments.map(name => fullFilamentData.find(f => f.Filament === name));
-            
-            // Normalize data for fair comparison across different chart types
-            const datasets = filamentData.map((filament, index) => {
-                const color = comparisonColors[index];
-
-                const dataPoints = selectedProperties.map(propKey => {
-                    const allValues = fullFilamentData.map(f => f[propKey]);
-                    const maxValue = Math.max(...allValues);
-                    let normalizedValue = (filament[propKey] / maxValue) * 100;
-
-                    if (propKey === 'Price' || propKey === 'TaberAbrasion') {
-                        const minValue = Math.min(...allValues);
-                        // A more robust normalization for "lower is better"
-                        if (maxValue - minValue !== 0) {
-                            normalizedValue = 100 * (1 - (filament[propKey] - minValue) / (maxValue - minValue));
-                        } else {
-                            normalizedValue = 100;
-                        }
-                    }
-                    return normalizedValue.toFixed(1);
-                });
-
-                return {
-                    label: filament.Filament,
-                    data: dataPoints,
-                    fill: selectedChartType === 'radar' || selectedChartType === 'line',
-                    backgroundColor: color.startsWith('#') ? `${color}40` : color.replace(')', ', 0.25)').replace('rgb', 'rgba'),
-                    borderColor: color,
-                    pointBackgroundColor: color,
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: color,
-                    tension: selectedChartType === 'line' ? 0.1 : 0
-                };
-            });
-
-            const chartData = {
-                labels: selectedProperties.map(key => properties.find(p => p.key === key).label),
-                datasets: datasets
-            };
-
-            // Define options based on chart type
-            let chartOptions = {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                const filamentName = context.dataset.label;
-                                const propKey = selectedProperties[context.dataIndex];
-                                const originalValue = fullFilamentData.find(f => f.Filament === filamentName)[propKey];
-                                let unit = '';
-                                if (propKey.includes('Strength') || propKey.includes('Adhesion') || propKey.includes('Stiffness')) unit = ' MPa';
-                                if (propKey.includes('Deflection')) unit = ' °C';
-                                if (propKey.includes('Resistance')) unit = ' kJ/m²';
-                                if (propKey.includes('Flexibility')) unit = '%';
-                                if (propKey.includes('Price')) unit = ' $/kg';
-                                if (propKey.includes('Abrasion')) unit = ' mg loss';
-                                return `${context.label}: ${originalValue}${unit}`;
-                            },
-                             title: function(tooltipItems) {
-                                return tooltipItems[0]?.dataset.label || '';
-                            }
-                        }
-                    }
-                }
-            };
-            
-            if (selectedChartType === 'radar') {
-                chartOptions.scales = {
-                    r: {
-                        angleLines: { display: true },
-                        suggestedMin: 0,
-                        suggestedMax: 100,
-                        ticks: { display: false, stepSize: 20 },
-                        pointLabels: { font: { size: 12 } }
-                    }
-                };
-            } else { // Bar or Line
-                chartOptions.scales = {
-                    y: {
-                        beginAtZero: true,
-                        suggestedMax: 100,
-                        title: { display: true, text: 'Normalized Performance Score (0-100)' }
-                    },
-                    x: {}
-                };
-                 // For Bar charts, group the bars by property
-                if (selectedChartType === 'bar') {
-                    chartOptions.plugins.tooltip.callbacks.title = function(tooltipItems) {
-                         return tooltipItems[0]?.label || '';
-                    }
-                }
-            }
-
-
-            // Destroy old chart if it exists
-            if (customComparisonChartInstance) {
-                customComparisonChartInstance.destroy();
-            }
-
-            // Create new chart
-            customComparisonChartInstance = new Chart(document.getElementById('customComparisonChart'), {
-                type: selectedChartType,
-                data: chartData,
-                options: chartOptions
-            });
-        });
     </script>
-<footer class="text-center mt-16 text-gray-500 text-sm">
-            <p>Data sourced from industry averages. Performance may vary by brand and print settings. Always print in a well-ventilated area.</p>
-            <p>Infographic created with Chart.js and Tailwind CSS. NO SVG or Mermaid.js used.</p>
-        </footer>
-    </div>
 </body>
 </html>
